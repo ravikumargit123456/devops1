@@ -30,12 +30,9 @@ jobs:
       # 16. Publish Test Results
 
       - name: Publish Test Results
-
+        if: always ()
         uses: actions/upload-artifact@v4.6.2
-
         with:
-
           name: test-results-artifact
-
           path: test-results/results.xml
  
