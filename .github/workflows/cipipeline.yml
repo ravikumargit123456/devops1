@@ -47,5 +47,3 @@ jobs:
           name: eslint-code-quality-artifact
           path: lint-report.txt|
 
-I
-        
