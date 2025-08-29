@@ -45,5 +45,18 @@ jobs:
         uses: actions/upload-artifact@v4.6.2
         with:
           name: eslint-code-quality-artifact
-          path: lint-report.txt|
+          path: lint-report.txt
+      - name: run dependency sacnning
+        run: npm audit --audit-level=high --json > npm-audit-report.json
+      - name: run dependency scanning
+        run: npm audit =- wudit-level higs == json > mpw-wudit-report.jsom
+
+      - name: publish dependency sacnning
+        if: always()
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: dependency-sacnning-artifact
+          path: mpw-wudit-report.jsom
+ 
+       
 
